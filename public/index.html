@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1">
+    <link rel="stylesheet" href="css/style.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.slim.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/particle-api-js/5/particle.min.js"></script>
+	<title>Mobile Vending Machine</title>
+	<style>
+	h1   {color: black;border-style:solid;background-color:white;border-width: 0px}
+    table {border-style:solid;border-width: 3px;border-color: black;background-color:white;}
+    h2   {color: black;border-style:solid;background-color:white;border-width: 0px}
+    form {color: black;border-style:solid;background-color:white;border-width: 0px}
+	</style>
+</head>
+<h1> Mobile Vending Machine</h1>
+<body class="subpage">
+    <!--<script>
+        var unlock = 'http://localhost:3001/api/unlock';
+        var lock = 'http://localhost:3001/api/lock';
+        var update_loc = 'http://localhost:3001/api/update_location';
+        var xhr = new XMLHttpRequest();
+
+        function EAZONESIX(url) {
+            console.log(url)
+            xhr.open('GET',url,true);
+            xhr.send(null);
+        }
+    </script>
+	-->
+	<div style="width: 720px"><iframe width="420" height="420" src="https://maps.google.com/maps?width=720&amp;height=600&amp;hl=en&amp;coord=33.7754021,-84.40132939670014&amp;q=759%20Ferst%20DrAtlanta%2C%20GA%2030318+(Homeless%20Vending%20Machine)&amp;ie=UTF8&amp;t=h&amp;z=18&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/map-my-route/">Create route map</a></iframe></div><br />
+<p>
+<h2>What is currently in the vending machine?</h2>
+<table>
+    <tr>
+        <td>Item</td>
+        <td>Amount</td>
+        <td>Price</td>
+    </tr>
+    <tr>
+        <td>Coca-Cola 12oz</td>
+        <td>1</td>
+        <td>$.95</td>
+    </tr>
+    <tr>
+        <td>Airpods</td>
+        <td>1</td>
+        <td>$129.99</td>
+    </tr>
+</table>
+<br><br>
+</form>
+<h3 id="requestArea">Status Unknown</h3>
+<button type="button" id="myButton">Pay</button>
+<p id="paymentInstruction"></p>
+</p>
+    <script src="js/connection.js"></script>
+</body>
+</html>
